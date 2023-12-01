@@ -1,7 +1,7 @@
 // Conncetion Infos
 #define BLYNK_TEMPLATE_ID "TMPL2Au-0tTGm"
 #define BLYNK_TEMPLATE_NAME "poulaillet"
-#define BLYNK_AUTH_TOKEN "9x2ZHk0KiEr97J2SNxTCDh8lhQICaZDK"
+#define BLYNK_AUTH_TOKEN "auth_token_here"
 #define BLYNK_PRINT Serial
 // Including libraries
 #include <WiFi.h>
@@ -12,7 +12,7 @@
 
 
 // Auth infos
-char auth[] = "9x2ZHk0KiEr97J2SNxTCDh8lhQICaZDK";
+char auth[] = "auth_token_here";
 char ssid[] = "Wokwi-GUEST"; 
 char pass[] = ""; 
 
