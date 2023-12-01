@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Haithem BENHALIMA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 16.2, "left": -218, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 19.2, "left": 168.04, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -104.1,
+      "left": -148.1,
+      "attrs": { "distance": "273" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 256,
+      "left": -205.6,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -86.1,
+      "left": -293.4,
+      "attrs": { "temperature": "36.8", "humidity": "49.5" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -106.9, "left": 182.2, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -90, "left": 282.2, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -53.65,
+      "left": 326.4,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "bb1:bn.25", "black", [ "h0" ] ],
+    [ "esp:5V", "bb1:bp.25", "red", [ "h0" ] ],
+    [ "dht1:GND", "bb1:bn.1", "black", [ "v0" ] ],
+    [ "dht1:VCC", "bb1:bp.1", "red", [ "v0" ] ],
+    [ "esp:23", "dht1:SDA", "green", [ "h76.8", "v-172.8", "h-672", "v172.8", "h67.2" ] ],
+    [
+      "ultrasonic1:VCC",
+      "bb1:bp.3",
+      "red",
+      [ "v0", "h-115.2", "v-96", "h-105.6", "v326.4", "h134.4" ]
+    ],
+    [ "ultrasonic1:ECHO", "esp:18", "white", [ "v9.6", "h344.8", "v124.8" ] ],
+    [ "ultrasonic1:TRIG", "esp:5", "white", [ "v19.2", "h364.4", "v124.8" ] ],
+    [ "lcd1:SDA", "esp:21", "yellow", [ "h-19.2", "v105.8", "h537.6", "v-307.2" ] ],
+    [ "lcd1:SCL", "esp:22", "yellow", [ "h-38.4", "v105.9", "h566.4", "v-336" ] ],
+    [ "lcd1:GND", "bb1:bn.5", "black", [ "h-57.6", "v-48", "h115.2" ] ],
+    [ "lcd1:VCC", "bb1:bp.6", "red", [ "h-38.4", "v-47.9", "h115.2" ] ],
+    [ "ultrasonic1:GND", "bb1:bn.24", "black", [ "v0", "h382.8", "v240", "h-259.2" ] ],
+    [ "pot1:GND", "bb1:bn.23", "black", [ "v19.2", "h144", "v268.8", "h-288", "v-19.2" ] ],
+    [ "pot1:VCC", "esp:3V3", "violet", [ "v19.2", "h-87.2", "v67.2" ] ],
+    [ "pot1:SIG", "esp:34", "cyan", [ "v57.6", "h-86.8", "v38.4" ] ],
+    [ "led1:C", "bb1:bn.22", "black", [ "v9.6", "h77.2", "v278.4", "h-316.8" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "esp:16", "green", [ "v307.2", "h-97.2", "v-105.6", "h-19.2" ] ]
+  ],
+  "dependencies": {}
+}
