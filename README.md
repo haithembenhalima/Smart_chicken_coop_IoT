@@ -20,3 +20,11 @@ and link this sensors using the application mobile to see: Temperature, Humidity
 * Selenvoid valve
 * heater
 
+# Simulation
+
+The simulation using the Wokwi simulator and Blynk IoT server
+<div align="center">
+    <img src="/Images/Chicken-farm-flow-chart800x800.jpg" width="250px"</img>
+    <img src="/Images/Chicken-farm-flow-chart800x800.jpg" width="250px"</img>
+</div>
+
