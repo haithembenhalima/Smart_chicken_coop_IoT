@@ -3,4 +3,4 @@ This project is a simple training in the field of the Internet of Things,
 with the multiple sensors and actuators.
 The idea is to simulate a smart chicken coop with the multiple sensors 
 and link this sensors using the application mobile to see: Temperature, Humidity, Distances...
-![Tux, the Linux mascot](images/Chicken-farm-flow-chart800x800.png)
+ <center><img src="images/Chicken-farm-flow-chart800x800.jpg" alt="Italian Trulli"></center>
