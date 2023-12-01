@@ -1,2 +1,6 @@
-# Smart_chicken_coop_IoT
-An IoT simulation of a Samrt chicken coop using ESP32 and Blynk
+# Smart Chicken Coop
+This project is a simple training in the field of the Internet of Things,
+with the multiple sensors and actuators.
+The idea is to simulate a smart chicken coop with the multiple sensors 
+and link this sensors using the application mobile to see: Temperature, Humidity, Distances...
+
